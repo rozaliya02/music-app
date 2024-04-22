@@ -1,4 +1,4 @@
-const Home = () => {
+const HomePage = () => {
   return (
     <section id="welcomePage">
       <div id="welcome-message">
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
