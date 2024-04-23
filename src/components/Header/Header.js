@@ -1,30 +1,31 @@
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
       <nav>
         <img src="./images/headphones.png" />
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
         <ul>
           {/* <!--All user--> */}
           <li>
-            <a href="/catalog">Catalog</a>
+            <Link to="/catalog">Catalog</Link>
           </li>
           <li>
-            <a href="/search">Search</a>
+            <Link to="/search">Search</Link>
           </li>
           {/* <!--Only guest--> */}
           <li>
-            <a href="/login">Login</a>
+            <Link to="/login">Login</Link>
           </li>
           <li>
-            <a href="/register">Register</a>
+            <Link to="/register">Register</Link>
           </li>
           {/* <!--Only user--> */}
           <li>
-            <a href="/create-album">Create Album</a>
+            <Link to="/create-album">Create Album</Link>
           </li>
           <li>
-            <a href="/logout">Logout</a>
+            <Link to="/logout">Logout</Link>
           </li>
         </ul>
       </nav>

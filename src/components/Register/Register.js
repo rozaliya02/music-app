@@ -1,7 +1,22 @@
+import { useNavigate } from "react-router-dom";
+import * as authService from "../../services/authServices";
+
 const Register = () => {
+  const navigate = useNavigate();
+  function registerHandler(e) {
+    e.preventDefault();
+    let formData = new FormData(e.currentTarget);
+    let email = formData.get("email");
+    let password = formData.get("password");
+
+    authService
+      .register(email, password)
+      .then(authData => console.log(authData));
+    navigate("/");
+  }
   return (
     <section id="registerPage">
-      <form>
+      <form onSubmit={registerHandler}>
         <fieldset>
           <legend>Register</legend>
 
